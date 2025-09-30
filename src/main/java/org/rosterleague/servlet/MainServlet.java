@@ -33,10 +33,10 @@ public class MainServlet extends HttpServlet {
     private void insertInfo() {
         try {
             // Leagues
-            ejbRequest.createLeague(new LeagueDetails("L1", "Mountain", "Soccer"));
-            ejbRequest.createLeague(new LeagueDetails("L2", "Valley", "Basketball"));
-            ejbRequest.createLeague(new LeagueDetails("L3", "Foothills", "Soccer"));
-            ejbRequest.createLeague(new LeagueDetails("L4", "Alpine", "Snowboarding"));
+            ejbRequest.createLeague(new LeagueDetails("L1", "Mountain", "Soccer","any"));
+            ejbRequest.createLeague(new LeagueDetails("L2", "Valley", "Basketball","summer"));
+            ejbRequest.createLeague(new LeagueDetails("L3", "Foothills", "Soccer","any"));
+            ejbRequest.createLeague(new LeagueDetails("L4", "Alpine", "Snowboarding","winter"));
 
             // Teams
             ejbRequest.createTeamInLeague(new TeamDetails("T1", "Honey Bees", "Visalia"), "L1");

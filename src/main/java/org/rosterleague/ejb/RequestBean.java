@@ -390,7 +390,7 @@ public class RequestBean implements Request, Serializable {
             return null;
         } else {
             for (League league : leagues) {
-                LeagueDetails leagueDetails = new LeagueDetails(league.getId(), league.getName(), league.getSport());
+                LeagueDetails leagueDetails = new LeagueDetails(league.getId(), league.getName(), league.getSport(),league.getType());
                 detailsList.add(leagueDetails);
             }
 
@@ -503,7 +503,7 @@ public class RequestBean implements Request, Serializable {
 
         try {
             League league = em.find(League.class, leagueId);
-            leagueDetails = new LeagueDetails(league.getId(), league.getName(), league.getSport());
+            leagueDetails = new LeagueDetails(league.getId(), league.getName(), league.getSport(), league.getType());
         } catch (Exception ex) {
             throw new EJBException(ex);
         }

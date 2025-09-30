@@ -31,7 +31,17 @@ public abstract class League implements Serializable {
     protected String name;
     protected String sport;
     protected Collection<Team> teams;
-        
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    protected String type;
+
     @Id
     public String getId() {
         return id;
@@ -65,13 +75,14 @@ public abstract class League implements Serializable {
     public void setTeams(Collection<Team> teams) {
         this.teams = teams;
     }
-    
+
     public void addTeam(Team team) {
         this.getTeams().add(team);
     }
-    
+
     public void dropTeam(Team team) {
         this.getTeams().remove(team);
     }
-    
+
+
 }
