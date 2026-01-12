@@ -21,11 +21,6 @@ public class LeagueDetails implements Serializable {
     private final String id;
     private final String name;
     private final String sport;
-
-    public String getType() {
-        return type;
-    }
-
     private final String type;
 
     public LeagueDetails(String id, String name, String sport, String type) {
@@ -47,6 +42,8 @@ public class LeagueDetails implements Serializable {
     public String getSport() {
         return sport;
     }
+
+    public String getType(){return type;}
 
 
 
