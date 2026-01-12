@@ -26,10 +26,11 @@ public class SummerLeague extends League implements Serializable {
     public SummerLeague() {
     }
     
-    public SummerLeague(String id, String name, String sport) 
+    public SummerLeague(String id, String name, String sport,String type)
             throws IncorrectSportException {
         this.id = id;
         this.name = name;
+        this.type=type;
         if (sport.equalsIgnoreCase("swimming") ||
                 sport.equalsIgnoreCase("soccer") ||
                 sport.equalsIgnoreCase("basketball") ||

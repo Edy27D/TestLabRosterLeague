@@ -26,10 +26,11 @@ public class WinterLeague extends League implements Serializable {
     public WinterLeague() {
     }
     
-    public WinterLeague(String id, String name, String sport) throws
+    public WinterLeague(String id, String name, String sport,String type) throws
             IncorrectSportException {
         this.id = id;
         this.name = name;
+        this.type=type;
         if (sport.equalsIgnoreCase("hockey") ||
                 sport.equalsIgnoreCase("skiing") ||
                 sport.equalsIgnoreCase("snowboarding")) {
